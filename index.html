@@ -1,72 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 	<head>
-		<meta charset="UTF-8">
-		<title>Document</title>
-		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-		<style>
-
-		</style>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- <script src="https://cdn.bootcss.com/jquery/2.0.2/jquery.js"></script> -->
+		<script>
+			window.onload=function(){ 
+				 window.location.href="./_book/index.html";
+			}
+			
+		</script>
 	</head>
-
 	<body>
-
-		 
-		<div>
-			阿萨德法师打发第三方按时发斯蒂芬
-
-		</div>
 	</body>
-	<script>
-		// 		(function(name) {
-		// 			debugger
-		// 			//读取cookies
-		// 			var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
-		// 			arr = document.cookie.match(reg);
-		// 			if (arr) {
-		// 				return request_token = unescape(arr[2]);
-		// 			} else {
-		// 				return request_token = null;
-		// 			}
-		// 		})('request_token');
-
-		function formatDate(timestamp = +new Date()) {
-			function num(s) {				
-				return  Number(s)< 10 ? '0' + s: s;
-			}
-			// 今天
-			var todytime = new Date();
-			var todyy = todytime.getFullYear(); //getFullYear方法以四位数字返回年份
-			var todyM = todytime.getMonth() + 1; // getMonth方法从 Date 对象返回月份 (0 ~ 11)，返回结果需要手动加一
-			var todyD = todytime.getDate(); // getDate方法从 Date 对象返回一个月中的某一天 (1 ~ 31)
-			
-			// 昨天
-			var preDate = new Date(todytime.getTime() - 24*60*60*1000); //前一天
-			var preM = preDate.getMonth() + 1;  
-			var preD = preDate.getDate();  
-			
-
-			if (timestamp) {
-				var time = new Date(timestamp);
-				var y = time.getFullYear(); //getFullYear方法以四位数字返回年份
-				var M = time.getMonth() + 1; // getMonth方法从 Date 对象返回月份 (0 ~ 11)，返回结果需要手动加一
-				var d = time.getDate(); // getDate方法从 Date 对象返回一个月中的某一天 (1 ~ 31)
-				var h = time.getHours(); // getHours方法返回 Date 对象的小时 (0 ~ 23)
-				var m = time.getMinutes(); // getMinutes方法返回 Date 对象的分钟 (0 ~ 59)
-				var s = time.getSeconds(); // getSeconds方法返回 Date 对象的秒数 (0 ~ 59)
-				 
-				
-				if ((todyM == M) && (todyD == d)) {
-					return '今天 ' + num(h) + ':' + num(m);		 
-				} else if((preM == M) && (preD == d)){
-					return '昨天 ' + num(h) + ':' + num(m);
-				}else{
-					 return num(M) + '-' + num(d) + ' ' + num(h) + ':' + num(m);
-				}
-			}
-		}
-		console.log(formatDate(1553677367000))
-	</script>
-
 </html>
